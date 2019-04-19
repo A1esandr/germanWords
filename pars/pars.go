@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func Parse(s string) [][2]string {
+func Parse(s string) [][]string {
 
 	m := make(map[string]string)
 
@@ -39,10 +39,10 @@ func Parse(s string) [][2]string {
 		return keys[i] < keys[j]
 	})
 
-	v := make([][2]string, len(keys))
+	v := make([][]string, len(keys))
 	for i:=0; i<len(keys);i++  {
-		v[i][0] = strconv.FormatInt(keys[i], 10)
-		v[i][1] = m[strconv.FormatInt(keys[i], 10)]
+		v[i] = append(v[i], strconv.FormatInt(keys[i], 10))
+		v[i] = append(v[i], m[strconv.FormatInt(keys[i], 10)])
 	}
 
 	return v

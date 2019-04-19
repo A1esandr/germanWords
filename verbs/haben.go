@@ -1,10 +1,13 @@
 package main
 
-import "germanWords/check"
+import (
+	"germanWords/check"
+	"germanWords/shuffle"
+)
 
 func main() {
 
-	w := [][2]string{
+	w := [][]string{
 		{"I have","ich habe"},
 		{"He has","er hat"},
 		{"She has","sie hat"},
@@ -15,6 +18,8 @@ func main() {
 		{"You have (single)","du hast"},
 		{"You have (pl)","ihr habt"},
 	}
+
+	shuffle.Shuffle(w)
 
 	check.Check(w)
 }

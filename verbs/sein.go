@@ -18,7 +18,7 @@ func main() {
 	//
 	//Sie/sie(Вы/они) — sind (есть)
 
-	w := [][2]string{
+	w := [][]string{
 		{"I am","Ich bin"},
 		{"You are (single)","Du bist"},
 		{"He is","Er ist"},

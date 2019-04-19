@@ -20,7 +20,7 @@ func main() {
 	//
 	//sie, Sie* — они, Вы
 
-	w := [][2]string{
+	w := [][]string{
 		{"I","ich"},
 		{"You (single)","du"},
 		{"You (sev)","ihr"},

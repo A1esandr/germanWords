@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func Check(s [][2]string) {
+func Check(s [][]string) {
 	reader := bufio.NewReader(os.Stdin)
 
 	for i:=0; i< len(s); i++ {
@@ -15,7 +15,7 @@ func Check(s [][2]string) {
 	}
 }
 
-func subCheck(p [2]string, reader bufio.Reader) {
+func subCheck(p []string, reader bufio.Reader) {
 	fmt.Print(p[0]+": ")
 	text, _ := reader.ReadString('\n')
 	text = strings.Replace(text, "\n", "", -1)
