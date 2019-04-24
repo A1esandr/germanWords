@@ -19,15 +19,15 @@ func main() {
 	//Sie/sie(Вы/они) — sind (есть)
 
 	w := [][]string{
-		{"I am","Ich bin"},
-		{"You are (single)","Du bist"},
-		{"He is","Er ist"},
-		{"She is","Sie ist"},
-		{"It is","Es ist"},
-		{"We are","Wir sind"},
-		{"You are (pl)","Ihr seid"},
+		{"I am","ich bin"},
+		{"You are (single)","du bist"},
+		{"He is","er ist"},
+		{"She is","sie ist"},
+		{"It is","es ist"},
+		{"We are","wr sind"},
+		{"You are (pl)","ihr seid"},
 		{"You are (polite)","Sie sind"},
-		{"They are","Sie sind"},
+		{"They are","sie sind"},
 	}
 
 	check.Check(w)
