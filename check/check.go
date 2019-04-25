@@ -22,6 +22,8 @@ func subCheck(p []string, reader bufio.Reader) {
 
 	if text == p[1] {
 		fmt.Println("success")
+	} else {
+		fmt.Println("wrong. right - "+p[1])
 	}
 }
 

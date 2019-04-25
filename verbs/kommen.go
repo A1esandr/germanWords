@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	w := reader.ReadCsv("csv/verbs/wohnen.csv")
+	w := reader.ReadCsv("csv/verbs/kommen.csv")
 	check.Check(w)
 }
