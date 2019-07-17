@@ -11,18 +11,8 @@ import (
 )
 
 func ReadCsv(name string) [][]string {
-	csvFile, err := os.Open(name)
-	// if we os.Open returns an error then handle it
-	if err != nil {
-		fmt.Println(err)
-	}
 
-	// defer the closing of our csvFile so that we can parse it later on
-	defer csvFile.Close()
-
-	byteArray, _ := ioutil.ReadAll(csvFile)
-
-	s := string(byteArray[:])
+	s := Read(name)
 
 	r := csv.NewReader(strings.NewReader(s))
 
@@ -43,4 +33,19 @@ func ReadCsv(name string) [][]string {
 	}
 
 	return res
+}
+
+func Read(name string) string {
+	file, err := os.Open(name)
+	// if we os.Open returns an error then handle it
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	// defer the closing of our csvFile so that we can parse it later on
+	defer file.Close()
+
+	byteArray, _ := ioutil.ReadAll(file)
+
+	return string(byteArray[:])
 }
