@@ -4,7 +4,7 @@ import "germanWords/check"
 
 func main() {
 
-	//Ic h(я) – bin (есть)
+	//Ich(я) – bin (есть)
 	//
 	//Du (ты) – bist (есть)
 	//
