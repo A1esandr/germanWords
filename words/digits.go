@@ -1,11 +1,12 @@
-package main
+package words
 
 import (
+	"fmt"
 	"germanWords/check"
 	"germanWords/pars"
 )
 
-func main() {
+func Digits() {
 	s := `//0 – null	10 – zehn	20 – zwanzig	10 – zehn
 	//1 – eins	11 – elf	21 – einundzwanzig (1 и 20)	20 – zwanzig
 	//2 – zwei	12 – zwölf	22 – zweiundzwanzig (2 и 20)	30 – dreißig
@@ -19,5 +20,6 @@ func main() {
 
 	ss := pars.Parse(s)
 
+	fmt.Println("Digits exercise. Type given digit in german.")
 	check.Check(ss)
 }

@@ -1,10 +1,10 @@
-package main
+package words
 
 import (
 	"germanWords/check"
 )
 
-func main() {
+func Pronoun() {
 
 	//ich -я
 	//
@@ -21,15 +21,15 @@ func main() {
 	//sie, Sie* — они, Вы
 
 	w := [][]string{
-		{"I","ich"},
-		{"You (single)","du"},
-		{"You (sev)","ihr"},
-		{"You (sev, polite)","Sie"},
-		{"He","er"},
-		{"She","sie"},
-		{"It","es"},
-		{"We","wir"},
-		{"They","sie"},
+		{"I", "ich"},
+		{"You (single)", "du"},
+		{"You (sev)", "ihr"},
+		{"You (sev, polite)", "Sie"},
+		{"He", "er"},
+		{"She", "sie"},
+		{"It", "es"},
+		{"We", "wir"},
+		{"They", "sie"},
 	}
 
 	check.Check(w)
