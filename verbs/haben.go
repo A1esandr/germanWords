@@ -1,11 +1,11 @@
-package main
+package verbs
 
 import (
 	"germanWords/check"
 	"germanWords/shuffle"
 )
 
-func main() {
+func Haben() {
 
 	w := [][]string{
 		{"I have", "ich habe"},

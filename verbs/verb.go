@@ -1,4 +1,4 @@
-package main
+package verbs
 
 import (
 	"germanWords/check"

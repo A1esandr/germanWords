@@ -1,12 +1,11 @@
-package main
+package verbs
 
 import (
 	"germanWords/check"
 	"germanWords/reader"
 )
 
-func main() {
+func Gehen() {
 	w := reader.ReadCsv("csv/verbs/gehen.csv")
 	check.Check(w)
 }
-

@@ -1,8 +1,8 @@
-package main
+package verbs
 
 import "germanWords/check"
 
-func main() {
+func Sein() {
 
 	//Ich(я) – bin (есть)
 	//
