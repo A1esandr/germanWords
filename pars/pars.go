@@ -14,7 +14,7 @@ func Parse(s string) [][]string {
 	s = strings.Replace(s, "//", "", -1)
 	sa := strings.Split(s, "\t")
 
-	for i:=0; i<len(sa);i++  {
+	for i := 0; i < len(sa); i++ {
 		if len(sa[i]) > 0 {
 
 			sb := strings.Split(sa[i], " – ")
@@ -31,7 +31,7 @@ func Parse(s string) [][]string {
 
 	i := 0
 	for k := range m {
-		keys[i], _ = strconv.ParseInt(k,0,0)
+		keys[i], _ = strconv.ParseInt(k, 0, 0)
 		i++
 	}
 
@@ -40,7 +40,7 @@ func Parse(s string) [][]string {
 	})
 
 	v := make([][]string, len(keys))
-	for i:=0; i<len(keys);i++  {
+	for i := 0; i < len(keys); i++ {
 		v[i] = append(v[i], strconv.FormatInt(keys[i], 10))
 		v[i] = append(v[i], m[strconv.FormatInt(keys[i], 10)])
 	}

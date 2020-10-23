@@ -27,8 +27,8 @@ func ReadCsv(name string) [][]string {
 			log.Fatal(err)
 		}
 
-		ss:=strings.Split(record[0], ";")
-		ss=ss[:2]
+		ss := strings.Split(record[0], ";")
+		ss = ss[:2]
 		res = append(res, ss)
 	}
 
