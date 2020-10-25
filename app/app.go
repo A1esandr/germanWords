@@ -40,7 +40,17 @@ func (a *App) Start() {
 	text = strings.Replace(text, "\n", "", -1)
 	switch text {
 	case "0":
-		words.Digits()
+		fmt.Println("Select verb: 0-9 (0), 10-100 (1)")
+		digit, _ := reader.ReadString('\n')
+		digit = strings.Replace(digit, "\n", "", -1)
+		switch digit {
+		case "0":
+			words.Digits()
+		case "1":
+			words.Tens()
+		default:
+			fmt.Println("Wrong digit select. Exit.")
+		}
 	case "1":
 		words.Pronoun()
 	case "2":
