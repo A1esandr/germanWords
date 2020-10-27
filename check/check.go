@@ -26,18 +26,3 @@ func subCheck(p []string, reader bufio.Reader) {
 		fmt.Println("wrong. right - " + p[1])
 	}
 }
-
-func PrintAll(w [9][2]string) {
-	s := ""
-	for i := 0; i < len(w); i++ {
-		s += w[i][1] + ", "
-	}
-	s += "\n"
-	fmt.Print(s)
-}
-
-func printBytes(s string) {
-	for i := 0; i < len(s); i++ {
-		fmt.Printf("%x ", s[i])
-	}
-}

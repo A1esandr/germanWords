@@ -22,7 +22,7 @@ func (a *App) Start() {
 	fmt.Println("v0.1")
 
 	mode := os.Getenv("MODE")
-	if mode != "cli" {
+	if mode == "web" {
 		helloHandler := func(w http.ResponseWriter, req *http.Request) {
 			_, err := io.WriteString(w, "Hello, world!\n")
 			if err != nil {
