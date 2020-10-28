@@ -35,21 +35,21 @@ func (a *App) Start() {
 	}
 
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Select exercise: digits (0), pronoun (1), nouns (2), verbs (3)")
+	fmt.Println("Select exercise: numbers (0), pronoun (1), nouns (2), verbs (3)")
 	text, _ := reader.ReadString('\n')
 	text = strings.Replace(text, "\n", "", -1)
 	switch text {
 	case "0":
-		fmt.Println("Select verb: 0-9 (0), 10-100 (1)")
+		fmt.Println("Select exercise: 0-9 (0), 10-100 (1)")
 		digit, _ := reader.ReadString('\n')
 		digit = strings.Replace(digit, "\n", "", -1)
 		switch digit {
 		case "0":
 			words.Digits()
 		case "1":
-			words.Tens()
+			words.Numbers()
 		default:
-			fmt.Println("Wrong digit select. Exit.")
+			fmt.Println("Wrong exercise select. Exit.")
 		}
 	case "1":
 		words.Pronoun()

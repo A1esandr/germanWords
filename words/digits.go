@@ -4,27 +4,16 @@ import (
 	"fmt"
 	"germanWords/check"
 	"germanWords/pars"
+	"germanWords/reader"
 )
 
 func Digits() {
-	s := `//0 – null	
-	//1 – eins
-	//2 – zwei
-	//3 – drei
-	//4 – vier
-	//5 – fünf
-	//6 – sechs
-	//7 – sieben	
-	//8 – acht
-	//9 – neun`
-
-	ss := pars.Parse(s)
-
 	fmt.Println("Digits exercise. Type given digit in german.")
-	check.Check(ss)
+	w := reader.ReadCsv("csv/groups/digits.csv")
+	check.Check(w)
 }
 
-func Tens() {
+func Numbers() {
 	s := `//10 – zehn	20 – zwanzig	10 – zehn
 	//11 – elf	21 – einundzwanzig (1 и 20)	20 – zwanzig
 	//12 – zwölf	22 – zweiundzwanzig (2 и 20)	30 – dreißig
@@ -38,6 +27,6 @@ func Tens() {
 
 	ss := pars.Parse(s)
 
-	fmt.Println("Digits exercise. Type given digit in german.")
+	fmt.Println("Numbers exercise. Type given number in german.")
 	check.Check(ss)
 }
