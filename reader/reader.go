@@ -15,6 +15,7 @@ func ReadCsv(name string) [][]string {
 	s := Read(name)
 
 	r := csv.NewReader(strings.NewReader(s))
+	r.Comma = rune([]byte(";")[0])
 
 	var res [][]string
 
@@ -27,9 +28,7 @@ func ReadCsv(name string) [][]string {
 			log.Fatal(err)
 		}
 
-		ss := strings.Split(record[0], ";")
-		ss = ss[:2]
-		res = append(res, ss)
+		res = append(res, record)
 	}
 
 	return res
