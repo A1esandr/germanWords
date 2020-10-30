@@ -65,11 +65,11 @@ func (a *App) Start() {
 		case "1":
 			verbs.Haben()
 		case "2":
-			verbs.Kommen()
+			verbs.Verb("kommen")
 		case "3":
 			verbs.Sein()
 		case "4":
-			verbs.Wohnen()
+			verbs.Verb("wohnen")
 		default:
 			fmt.Println("Wrong verb select. Exit.")
 		}
