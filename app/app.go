@@ -61,7 +61,7 @@ func (a *App) Start() {
 		verb = strings.Replace(verb, "\n", "", -1)
 		switch verb {
 		case "0":
-			verbs.Gehen()
+			verbs.Verb("gehen")
 		case "1":
 			verbs.Haben()
 		case "2":
