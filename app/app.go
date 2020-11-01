@@ -67,7 +67,7 @@ func (a *App) Start() {
 		case "2":
 			verbs.Verb("kommen")
 		case "3":
-			verbs.Sein()
+			verbs.Verb("sein")
 		case "4":
 			verbs.Verb("wohnen")
 		default:
