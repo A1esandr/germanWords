@@ -1,4 +1,4 @@
-package reader
+package app
 
 import (
 	"encoding/csv"
@@ -42,7 +42,12 @@ func Read(name string) string {
 	}
 
 	// defer the closing of our csvFile so that we can parse it later on
-	defer file.Close()
+	defer func() {
+		err := file.Close()
+		if err != nil {
+			fmt.Println(err)
+		}
+	}()
 
 	byteArray, _ := ioutil.ReadAll(file)
 

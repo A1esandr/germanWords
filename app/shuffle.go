@@ -1,4 +1,4 @@
-package shuffle
+package app
 
 import (
 	"math/rand"

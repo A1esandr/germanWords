@@ -4,8 +4,6 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"germanWords/verbs"
-	"germanWords/words"
 	"io"
 	"log"
 	"net/http"
@@ -45,35 +43,48 @@ func (a *App) Start() {
 		digit = strings.Replace(digit, "\n", "", -1)
 		switch digit {
 		case "0":
-			words.Digits()
+			fmt.Println("Digits exercise. Type given digit in german.")
+			a.Word("groups/digits")
 		case "1":
-			words.Numbers()
+			fmt.Println("Numbers exercise. Type given number in german.")
+			a.Word("groups/numbers")
 		default:
 			fmt.Println("Wrong exercise select. Exit.")
 		}
 	case "1":
-		words.Pronoun()
+		a.ShuffleWord("groups/pronoun")
 	case "2":
-		words.Nouns()
+		a.Word("groups/simple_nouns")
 	case "3":
 		fmt.Println("Select verb: gehen (0), haben (1), kommen (2), sein (3), wohnen (4)")
 		verb, _ := reader.ReadString('\n')
 		verb = strings.Replace(verb, "\n", "", -1)
 		switch verb {
 		case "0":
-			verbs.Verb("gehen")
+			a.Word("verbs/gehen")
 		case "1":
-			verbs.Verb("haben")
+			a.Word("verbs/haben")
 		case "2":
-			verbs.Verb("kommen")
+			a.Word("verbs/kommen")
 		case "3":
-			verbs.Verb("sein")
+			a.Word("verbs/sein")
 		case "4":
-			verbs.Verb("wohnen")
+			a.Word("verbs/wohnen")
 		default:
 			fmt.Println("Wrong verb select. Exit.")
 		}
 	default:
 		fmt.Println("Wrong select. Exit.")
 	}
+}
+
+func (a *App) Word(word string) {
+	w := ReadCsv("csv/" + word + ".csv")
+	Check(w)
+}
+
+func (a *App) ShuffleWord(word string) {
+	w := ReadCsv("csv/" + word + ".csv")
+	Shuffle(w)
+	Check(w)
 }
