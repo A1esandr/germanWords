@@ -63,7 +63,7 @@ func (a *App) Start() {
 		case "0":
 			verbs.Verb("gehen")
 		case "1":
-			verbs.Haben()
+			verbs.Verb("haben")
 		case "2":
 			verbs.Verb("kommen")
 		case "3":
